@@ -30,12 +30,44 @@ namespace BeerLib
 
         public Beer? DeleteBeer(int id)
         {
-            Beer? = beer = _beers.Find(b => b.Id == id);
+            Beer? beer = _beers.Find(b => b.Id == id);
             if (beer !=null)
             {
                 _beers.Remove(beer);
             }
             return beer;
+        }
+
+        //public Beer? UpdateBeer(int id, Beer beerData) 
+        //{
+        //    beerData.ValidBeer();
+        //    Beer? beerToUpdate = _beers.Find(b => b.Id == beerData.Id);
+        //    if (beerToUpdate != null)
+        //    {
+        //        beerToUpdate.Name = beerData.Name;
+        //        beerToUpdate.Abv = beerData.Abv;
+        //    }
+        //    return beerToUpdate;
+        //}
+
+        public Beer UpdateBeer(int Id, Beer beerData)
+        {
+            Beer? beerToUpdate = _beers.Find(b => b.Id == beerData.Id);
+            if (beerToUpdate != null)
+            {
+                {
+                    beerToUpdate.Id = beerData.Id;
+                    beerToUpdate.Name = beerData.Name;
+                    beerToUpdate.Abv = beerData.Abv;
+                    _beers.Add(beerToUpdate);
+                }
+            }
+            return beerToUpdate;
+        }
+
+        public Beer? GetById(int id)
+        {
+            return _beers.Find(beer => beer.Id == id);
         }
     }
 }

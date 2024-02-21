@@ -28,5 +28,11 @@ namespace BeerLib
                 throw new ArgumentOutOfRangeException("abv not valid");
             }
         }
+
+        public void ValidBeer()
+        {
+            ValidName();
+            ValidAbv();
+        }
     }
 }
