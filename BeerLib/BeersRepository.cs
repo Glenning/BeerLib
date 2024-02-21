@@ -50,7 +50,7 @@ namespace BeerLib
         //    return beerToUpdate;
         //}
 
-        public Beer UpdateBeer(int Id, Beer beerData)
+        public Beer? UpdateBeer(int Id, Beer beerData)
         {
             Beer? beerToUpdate = _beers.Find(b => b.Id == beerData.Id);
             if (beerToUpdate != null)
