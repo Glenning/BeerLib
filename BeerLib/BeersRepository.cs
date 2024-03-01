@@ -13,7 +13,9 @@ namespace BeerLib
         {
             new Beer { Id = 1, Name = "Big Beer", Abv = 8},
             new Beer { Id = 2, Name = "Light Beer", Abv = 2},
-            new Beer { Id = 3, Name = "Standard Beer", Abv = 4}
+            new Beer { Id = 3, Name = "Standard Beer", Abv = 4},
+            new Beer { Id = 4, Name = "Zero", Abv = 0},
+            new Beer { Id = 5, Name = "Strongest Beer", Abv = 11}
         };
 
         public List<Beer> GetBeers()
